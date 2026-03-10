@@ -1,8 +1,10 @@
+import { createUseStyles } from 'react-jss';
+
 export const header = {
-    date: '20.08.27',
-    names: 'DENIS & ANNA',
-    fistInitial: 'D',
-    secondInitial: 'A'
+    date: '09.08.26',
+    names: 'NIKITA & VERA',
+    fistInitial: 'N',
+    secondInitial: 'V'
 };
 
 export function NamedStatementText() {
@@ -22,21 +24,35 @@ export function NamedStatementText() {
 }
 
 // Timer deadline
-export const deadline = '20 Aug 2027 12:00:00 GMT';
+export const deadline = '09 Aug 2026 12:00:00 GMT';
+
+const useStyles = createUseStyles({
+    link: {
+        color: 'black',
+        textDecoration: 'underline',
+        '&:visited': {
+            color: 'black'
+        }
+    }
+});
 
 export function LocationText() {
+    const classes = useStyles();
+
     return (
         <>
-            The Birch
-            <br />
-            Зал BLACKWOOD HOUSE
+            Country Club Polyana
             <br />
             <br />
-            Московская область,
-            <br />
-            городской округ Солнечногорск,
-            <br />
-            территориальное управление Пешковское
+            <a
+                className={classes.link}
+                target="_blank"
+                href="https://yandex.ru/navi/org/polyana/156426660028?si=5u8q1u2rjakmqn3ejmefwznxwr"
+            >
+                Поляна, Московская область,
+                <br />
+                Серпуховский район
+            </a>
         </>
     );
 }

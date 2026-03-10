@@ -6,14 +6,14 @@ interface Props {
 }
 
 const useStyles = createUseStyles(() => ({
-  workArea: {
-    padding: [0, 100],
-    overflowX: 'hidden',
-  },
+    workArea: {
+        padding: [0, 100],
+        overflowX: 'hidden'
+    }
 }));
 
 export function WorkArea({ children }: Props) {
-  const classes = useStyles();
+    const classes = useStyles();
 
-  return <main className={classes.workArea}>{children}</main>;
+    return <main className={classes.workArea}>{children}</main>;
 }

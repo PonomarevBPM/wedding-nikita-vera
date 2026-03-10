@@ -77,7 +77,7 @@ const useStyles = createUseStyles((theme: Theme) => ({
         position: 'absolute',
         zIndex: '-1',
         right: '-20%',
-        top: '330%',
+        top: '500%',
         width: 110
     },
     radioLabel: {
@@ -160,11 +160,12 @@ export function FinalForm() {
                 <span className={classes.formSmallHeading}>
                     пожалуйста, заполните данную
                     <br />
-                    форму до 05.08.2027
+                    форму до 01.06.2026
                 </span>
                 <Form
                     onSubmit={async ({ formData }) => {
-                        await fetch('https://sheetdb.io/api/v1/rpih4e17e16ru', {
+                        console.log(formData);
+                        await fetch('https://sheetdb.io/api/v1/vm54n9cgijk5m', {
                             method: 'POST',
                             body: formData
                         }).then(() => {
@@ -251,19 +252,19 @@ export function FinalForm() {
                         Предпочтения по напиткам:
                         <img
                             className={classes.decoration}
-                            src={`${import.meta.env.BASE_URL}imgs/finalForm/decoaretion.JPG`}
+                            src={`${import.meta.env.BASE_URL}imgs/finalForm/decoaretion.png`}
                         />
                     </label>
                     <FormProvider {...methods}>
                         <CheckBoxGroup
                             options={[
-                                'Игристое',
-                                'Вино',
                                 'Пиво',
+                                'Игристое',
+                                'Вино белое',
+                                'Вино красное',
                                 'Водка',
                                 'Виски',
-                                'Джин',
-                                'Ром',
+                                'Коньяк',
                                 'Что-то безалкогольное'
                             ]}
                             {...methods.register('alcohol')}

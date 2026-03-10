@@ -29,38 +29,17 @@ export function Details() {
     return (
         <AnimatedBaseLayout>
             <div className={classes.detailsContainer}>
-                <span className={classes.detailsHeading}>детали</span>
-                <span className={classes.detailsText}>
-                    Мы будем рады любому подарку,
-                    <br />
-                    но предпочтение отдадим конверту
-                </span>
-                <img
-                    src={`${import.meta.env.BASE_URL}imgs/details/letter.JPG`}
-                    style={{ width: 100 }}
-                />
-                <span className={classes.detailsText}>
-                    Не стоит дарить нам цветы. В качестве
-                    <br />
-                    альтернативы, мы бы с удовольствием
-                    <br />
-                    приняли ваше хорошее настроение,
-                    <br />
-                    комнатное растение или бутылку вина
-                </span>
-                <img
-                    src={`${import.meta.env.BASE_URL}imgs/details/flower.jpg`}
-                    style={{ width: 150 }}
-                />
+                <span className={classes.detailsHeading}>Контакты</span>
+
                 <span className={classes.detailsText}>
                     По всем вопросам Вы можете обращаться
                     <br />
                     к нашим свадебным организаторам:
                     <br />
                     <br />
-                    Валерия +7 909 660-79-72
-                    <br />
                     Анастасия +7 977 257-87-47
+                    <br />
+                    Валерия +7 909 660-79-72
                 </span>
                 <img
                     src={`${import.meta.env.BASE_URL}imgs/details/dart_logo.png`}
