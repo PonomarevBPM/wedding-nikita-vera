@@ -52,7 +52,7 @@ export function Location() {
                 <div className={classes.imgContainer}>
                     <img
                         className={classes.img}
-                        src={`${import.meta.env.BASE_URL}imgs/location/Loft_1.JPG`}
+                        src={`${import.meta.env.BASE_URL}imgs/location/Loft_1.png`}
                     />
                     <img
                         className={classes.img}
